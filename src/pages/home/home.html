@@ -1,14 +1,42 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+  <ion-toolbar color="primary">
+    <ion-buttons end>
+      <button ion-button icon-only (click)= "getPicture()">
+        <ion-icon name="camera"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons>
+      <button ion-button icon-only (click)="logOut()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-toolbar>
 </ion-header>
 
+
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-card *ngFor="let imagen of items">
+    <!-- {{imagen | json}} -->
+    <img src={{imagen.url}}>
+
+    <ion-item>
+      <ion-icon name='leaf' item-start></ion-icon>
+      Tipo de árbol: {{imagen.tipo}}
+    </ion-item>
+    <ion-item>
+      <ion-icon name='pin' item-start></ion-icon>
+      Posicion: {{imagen.latitud}}, {{imagen.longitud}}
+    </ion-item>
+    <ion-item>
+      <ion-icon name='expand' item-start></ion-icon>
+      Ancho de copa: {{imagen.copa}}
+    </ion-item>
+    <ion-item>
+        <ion-icon name='resize' item-start></ion-icon>
+      Ancho de tronco: {{imagen.tronco}}
+    </ion-item>
+  </ion-card>
+
 </ion-content>
