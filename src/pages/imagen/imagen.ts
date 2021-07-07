@@ -20,7 +20,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 })
 export class ImagenPage {
   imagen;
-
+  
   storage: firebase.storage.Storage;
   db: firebase.firestore.Firestore;
   user: firebase.User;

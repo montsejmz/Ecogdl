@@ -25,6 +25,7 @@ tmp/
 temp/
 platforms/
 plugins/
+node_modules/
 plugins/android.json
 plugins/ios.json
 www/

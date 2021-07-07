@@ -71,7 +71,7 @@ export class HomePage {
     })
     .catch(error=>{
       const toast = this.toastCtrl.create({
-        message:"Hubo un error cerrando sesiómn",
+        message:"Hubo un error cerrando sesión",
         duration:2000,
         position:'top'
       });
